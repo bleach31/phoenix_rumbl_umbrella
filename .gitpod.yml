@@ -1,0 +1,15 @@
+image: 
+  file: .gitpod.dockerfile
+
+vscode:
+  extensions:
+    - elixir-lsp.elixir-ls
+    - mhutchie.git-graph
+
+ports:
+  - port: 4000-4010
+
+# Commands to start on workspace startup
+tasks:
+  - name: init DB and library
+    command: sh init.sh
