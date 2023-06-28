@@ -2,6 +2,6 @@
 mix local.rebar --force
 mix deps.get
 cd apps/rumble_web/assets && npm install
-cd ..
+cd ../../rumble/
 mix ecto.setup
 mix run initdb.exs
