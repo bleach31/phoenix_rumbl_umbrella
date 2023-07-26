@@ -1,14 +1,14 @@
 defmodule InfoSys.Counter do
-  def inc(pid), do: send(pid, :inc)
+  def inc(pid), do: send(pid, :inc) # 非同期、返事を待たない
 
-  def dec(pid), do: send(pid, :dec)
+  def dec(pid), do: send(pid, :dec) # 非同期、返事を待たない
 
   def val(pid, timeout \\ 5000) do
-    ref = make_ref() # グローバルにユニークな値
+    ref = make_ref() # グローバルにユニークな値、受付番号みたいなもん
     send(pid, {:val, self(), ref})
 
-    receive do
-      {^ref, val} -> val
+    receive do # 同期、返事を待つ
+      {^ref, val} -> val # 同じRefが返ってきてるか照会する
     after
         timeout -> exit(:timeout)
     end
