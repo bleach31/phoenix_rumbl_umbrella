@@ -1,34 +1,39 @@
+#---
+# Excerpted from "Programming Phoenix 1.4",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/phoenix14 for more book information.
+#---
 defmodule InfoSys.Counter do
-  def inc(pid), do: send(pid, :inc) # 非同期、返事を待たない
+  use GenServer
 
-  def dec(pid), do: send(pid, :dec) # 非同期、返事を待たない
+  def inc(pid), do: GenServer.cast(pid, :inc)
 
-  def val(pid, timeout \\ 5000) do
-    ref = make_ref() # グローバルにユニークな値、受付番号みたいなもん
-    send(pid, {:val, self(), ref})
+  def dec(pid), do: GenServer.cast(pid, :dec)
 
-    receive do # 同期、返事を待つ
-      {^ref, val} -> val # 同じRefが返ってきてるか照会する
-    after
-        timeout -> exit(:timeout)
-    end
+  def val(pid) do
+    GenServer.call(pid, :val)
   end
 
   def start_link(initial_val) do
-    {:ok, spawn_link(fn -> listen(initial_val) end)}
+    GenServer.start_link(__MODULE__, initial_val)
   end
 
-  defp listen(val) do
-    receive do
-      :inc ->
-        listen(val+1)
+  def init(initial_val) do # 勝手にstart_linkから呼びだされるやつ、初期化のスタートアップ関数
+    {:ok, initial_val}
+  end
 
-      :dec ->
-        listen(val-1)
+  def handle_cast(:inc, val) do
+    {:noreply, val + 1}
+  end
 
-      {:val, sender, ref} ->
-        send(sender,{ref,val})
-        listen(val)
-    end
+  def handle_cast(:dec, val) do
+    {:noreply, val - 1}
+  end
+
+  def handle_call(:val, _from, val) do
+    {:reply, val, val}
   end
 end
