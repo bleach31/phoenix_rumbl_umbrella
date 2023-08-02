@@ -22,7 +22,16 @@ defmodule InfoSys.Counter do
   end
 
   def init(initial_val) do # 勝手にstart_linkから呼びだされるやつ、初期化のスタートアップ関数
+    Process.send_after(self(), :tick, 1000)
     {:ok, initial_val}
+  end
+
+  def handle_info(:tick, val) when val <= 0, do: raise "boom!"
+
+  def handle_info(:tick, val) do
+    IO.puts("tick #{val}")
+    Process.send_after(self(), :tick, 1000)
+    {:noreply, val - 1}
   end
 
   def handle_cast(:inc, val) do
