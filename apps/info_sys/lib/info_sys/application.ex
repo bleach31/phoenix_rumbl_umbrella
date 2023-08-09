@@ -9,7 +9,10 @@ defmodule InfoSys.Application do
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: InfoSys.Worker.start_link(arg)
-      {InfoSys.Counter, 5}
+      # Supervisor.child_spec({InfoSys.Counter, 5}, restart: :temporary)
+      # Supervisor.child_spec({InfoSys.Counter, 110}, id: :long),
+      # Supervisor.child_spec({InfoSys.Counter, 5}, id: :short),
+      # Supervisor.child_spec({InfoSys.Counter, 1010}, id: :medium)
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
