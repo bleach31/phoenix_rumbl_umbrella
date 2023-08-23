@@ -8,6 +8,8 @@ defmodule InfoSys.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      InfoSys.Cache,
+      {Task.Supervisor, name: InfoSys.TaskSupervisor}
       # Starts a worker by calling: InfoSys.Worker.start_link(arg)
       # Supervisor.child_spec({InfoSys.Counter, 5}, restart: :temporary)
       # Supervisor.child_spec({InfoSys.Counter, 110}, id: :long),
