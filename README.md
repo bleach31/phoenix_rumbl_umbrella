@@ -1,5 +1,7 @@
 # Rumbl.Umbrella
 
+Start your Phoenix app with:
+```mix phx.server```
 
 ## launch virtual display
 ```
