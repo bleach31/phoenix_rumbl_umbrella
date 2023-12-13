@@ -7,11 +7,11 @@
 # Visit http://www.pragmaticprogrammer.com/titles/phoenix14 for more book information.
 #---
 defmodule InfoSys.Test.HTTPClient do
-  @wolfram_xml File.read!("test/fixtures/wolfram.xml")
+  @wolfram_xml File.read!("test/fixtures/wolfram_good.xml")
   def request(url) do
     url = to_string(url)
     cond do
-      String.contains?(url, "1+%2B+1") -> {:ok, {[], [], @wolfram_xml}}
+      String.contains?(url, "who+was+the+first+man+on+the+moon") -> {:ok, {[], [], @wolfram_xml}}
       true -> {:ok, {[], [], "<queryresult></queryresult>"}}
     end
   end

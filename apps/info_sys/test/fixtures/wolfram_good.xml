@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    xml:space='preserve'
+    numpods='13'
+    datatypes='MannedSpaceMission,Movie,Person'
+    timedout=''
+    timedoutpods=''
+    timing='2.297'
+    parsetiming='0.432'
+    parsetimedout='false'
+    recalculate=''
+    id='MSP58291hcdfg699f4ca6a100006a4fb783b4gcc2a0'
+    host='https://www6b3.wolframalpha.com'
+    server='10'
+    related='https://www6b3.wolframalpha.com/api/v1/relatedQueries.jsp?id=MSPa58301hcdfg699f4ca6a10000526g738ig123eei53142019838491228908'
+    version='2.6'
+    inputstring='who was the first man on the moon'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>first person to set foot on the Moon (July 20th, 1969)</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+ </pod>
+ <pod title='Result'
+     scanner='Data'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>Neil Armstrong</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+ </pod>
+ <pod title='Basic information'
+     scanner='Data'
+     id='BasicInformation:PeopleData'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>full name | Neil Alden Armstrong
+date of birth | Tuesday, August 5, 1930 (93 years ago)
+place of birth | Wapakoneta, Ohio, United States
+date of death | Saturday, August 25, 2012 (age: 82 years) (11 years ago)
+place of death | Cincinnati, Ohio, United States</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Grid' />
+  </expressiontypes>
+ </pod>
+ <pod title='Image'
+     scanner='Data'
+     id='Image:PeopleData'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <imagesource>http://en.wikipedia.org/wiki/File:Neil_Armstrong_pose.jpg</imagesource>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext></plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+ </pod>
+ <pod title='Timeline'
+     scanner='Data'
+     id='Timeline:PeopleData'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext></plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+ </pod>
+ <pod title='Notable facts'
+     scanner='Data'
+     id='NotableFacts:PeopleData'
+     position='600'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <datasources>
+    <datasource>TheWikimediaFoundationIncWikipedia</datasource>
+   </datasources>
+   <plaintext>American astronaut who was the first human to set foot on the Moon in 1969, known for speaking the words, &quot;That&apos;s one small step for [a] man, one giant leap for mankind.&quot;
+Received many awards, including the Presidential Medal of Freedom and the Congressional Space Medal of Honor for his accomplishments during spaceflights
+Participated in missions Gemini 8 and Apollo 11</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Grid' />
+  </expressiontypes>
+ </pod>
+ <pod title='Physical characteristics'
+     scanner='Data'
+     id='PhysicalCharacteristics:PeopleData'
+     position='700'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>height | 1.8 meters</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Grid' />
+  </expressiontypes>
+  <states count='1'>
+   <state name='Show non-metric'
+       input='PhysicalCharacteristics:PeopleData__Show non-metric' />
+  </states>
+ </pod>
+ <pod title='Familial relationships'
+     scanner='Data'
+     id='FamilialRelationships:PeopleData'
+     position='800'
+     error='false'
+     numsubpods='4'>
+  <subpod title='Parents'>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>Stephen Armstrong | Viola Armstrong</plaintext>
+  </subpod>
+  <subpod title='Siblings'>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>June Armstrong | Dean Armstrong</plaintext>
+  </subpod>
+  <subpod title='Spouses'>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>Janet Shearon (1956-1994) | Carol Held Knight (1994-2012)</plaintext>
+  </subpod>
+  <subpod title='Children'>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>Eric Armstrong | Karen Armstrong | Mark Armstrong</plaintext>
+  </subpod>
+  <expressiontypes count='4'>
+   <expressiontype name='Grid' />
+   <expressiontype name='Grid' />
+   <expressiontype name='Grid' />
+   <expressiontype name='Grid' />
+  </expressiontypes>
+  <states count='1'>
+   <state name='Show full dates'
+       input='FamilialRelationships:PeopleData__Show full dates' />
+  </states>
+ </pod>
+ <pod title='Notable films'
+     scanner='Data'
+     id='NotableFilms:PeopleData'
+     position='900'
+     error='false'
+     numsubpods='1'>
+  <subpod title='Appeared in'>
+   <microsources>
+    <microsource>MovieData</microsource>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <datasources>
+    <datasource>TheNumbers</datasource>
+   </datasources>
+   <plaintext>Forrest Gump (1994) | Apollo 13 (1995) | Quantum Quest: A Cassini Space Odyssey (2010) | Fly Me to the Moon (2008) | Time After Time (1979) | ... (total: 9)</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Grid' />
+  </expressiontypes>
+  <states count='1'>
+   <state name='More'
+       input='NotableFilms:PeopleData__More' />
+  </states>
+  <definitions count='1'>
+   <definition word='Appeared in'
+       desc='Includes films where an individual appeared as themself, or in historical or archival footage.' />
+  </definitions>
+ </pod>
+ <pod title='Space missions'
+     scanner='Data'
+     id='MannedSpaceMissions:PeopleData'
+     position='1000'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <microsources>
+    <microsource>MannedSpaceMissionData</microsource>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <plaintext>Gemini 8 (1966) | Apollo 11 (1969)</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Grid' />
+  </expressiontypes>
+ </pod>
+ <pod title='Estimated net worth'
+     scanner='Data'
+     id='NetWorth:PeopleData'
+     position='1100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <microsources>
+    <microsource>PeopleData</microsource>
+   </microsources>
+   <datasources>
+    <datasource>ForbesBillionairesList</datasource>
+   </datasources>
+   <plaintext>$8 million (US dollars)
+(as of 2018)</plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+ </pod>
+ <pod title='Wikipedia summary'
+     scanner='Data'
+     id='WikipediaSummary:PeopleData'
+     position='1200'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>Neil Alden Armstrong (August 5, 1930 - August 25, 2012) was an American astronaut and aeronautical engineer who in 1969 became the first person to walk on the Moon. He was also a naval aviator, test pilot, and university professor.</plaintext>
+   <infos count='1'>
+    <info>
+     <link url='http://en.wikipedia.org/wiki?curid=21247'
+         text='Full entry' />
+    </info>
+   </infos>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+ </pod>
+ <pod title='Wikipedia page hits history'
+     scanner='Data'
+     id='PopularityPod:WikipediaStatsData'
+     position='1300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+  <expressiontypes count='1'>
+   <expressiontype name='Default' />
+  </expressiontypes>
+  <states count='1'>
+   <state name='Log scale'
+       input='PopularityPod:WikipediaStatsData__Log scale' />
+  </states>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='MultiClash'
+      word=''
+      template='Assuming ${word1} is referring to ${desc1}. Use &quot;${word2}&quot; as ${desc2}.'
+      count='2'>
+   <value name='Miscellaneous'
+       word='the input'
+       desc='a quantity'
+       input='*MC.%7E-_*Miscellaneous-' />
+   <value name='HistoricalEvent'
+       word='first man on the moon'
+       desc='a historical event'
+       input='*MC.%7E-_*HistoricalEvent-' />
+  </assumption>
+ </assumptions>
+ <sources count='3'>
+  <source url='https://www6b3.wolframalpha.com/sources/MannedSpaceMissionDataSourceInformationNotes.html'
+      text='Manned space mission data' />
+  <source url='https://www6b3.wolframalpha.com/sources/MovieDataSourceInformationNotes.html'
+      text='Movie data' />
+  <source url='https://www6b3.wolframalpha.com/sources/PeopleDataSourceInformationNotes.html'
+      text='People data' />
+ </sources>
+</queryresult>

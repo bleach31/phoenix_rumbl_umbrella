@@ -15,7 +15,7 @@
     server='18'
     related='https://www6b3.wolframalpha.com/api/v1/relatedQueries.jsp?id=MSPa214819i17393918e9338000035h8aadg1gda66a01697175660060143921'
     version='2.6'
-    inputstring='1 1'>
+    inputstring='1+%2B+1'>
  <pod title='Input'
      scanner='Identity'
      id='Input'
