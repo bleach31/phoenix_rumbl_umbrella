@@ -10,7 +10,6 @@ defmodule InfoSysTest.CacheTest do
   use ExUnit.Case, async: true
   alias InfoSys.Cache
   @moduletag clear_interval: 100
-  @moduletag timeout: 10_000
 
   defp assert_shutdown(pid) do
     ref = Process.monitor(pid)
@@ -22,8 +21,7 @@ defmodule InfoSysTest.CacheTest do
 
   defp eventually(func) do
     if func.() do
-      Process.sleep(10)
-      eventually(func)
+      true
     else
       Process.sleep(10)
       eventually(func)
