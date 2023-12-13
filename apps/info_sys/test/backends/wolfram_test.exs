@@ -14,7 +14,7 @@ defmodule InfoSys.Backends.WolframTest do
     assert actual.text == "Neil Armstrong"
   end
 
-  #test "no query results reports an empty list" do
-  #  assert InfoSys.compute("none", [])
-  #end
+  test "no query results reports an empty list" do
+    assert InfoSys.compute("none", [])
+  end
 end
